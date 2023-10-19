@@ -1,0 +1,11 @@
+version: '2'
+services:
+  web:
+    privileged: true
+    build: .
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./receptor.conf:/etc/receptor/receptor.conf
+      - ./receptor:/etc/receptor
+
